@@ -78,6 +78,17 @@ return packer.startup(function(use)
   use "lunarvim/colorschemes" -- this gets you, "aurora", "codemonkey", "darkplus", "onedarker", "spacedark", "system76"
   use "folke/tokyonight.nvim" -- this gets you the "tokyonight" colorscheme
 
+  -- completion plugins
+  use "hrsh7th/nvim-cmp" -- The completion plugin
+  use "hrsh7th/cmp-buffer" -- The completion plugin
+  use "hrsh7th/cmp-path" -- The completion plugin
+  use "hrsh7th/cmp-cmdline" -- The completion plugin
+  use "saadparwaiz1/cmp_luasnip" -- snippet completions
+
+  -- snippets
+  use "L3MON4D3/LuaSnip" -- snippet engine
+  use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
   -- vim-emmet for html
   -- use "mattn/emmet-vim"
 
@@ -95,3 +106,4 @@ end)
 -- :PackerStatus - shows us all our plugins
 -- :PackerUpdate - updates our plugins
 -- :PackerSync - update and compiles a file that packer uses to make things faster for us. 
+-- :PackerInstall - installs the plugins you just wrote
