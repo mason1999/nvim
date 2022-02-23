@@ -95,6 +95,14 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer. super easy to install, delete and update
 
+
+  -- Telescope
+  use "nvim-telescope/telescope.nvim"
+  --use 'nvim-telescope/telescope-media-files.nvim'
+
+  -- buffers
+  use "kazhala/close-buffers.nvim"
+
   -- vim-emmet for html
   -- use "mattn/emmet-vim"
 
