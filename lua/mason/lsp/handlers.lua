@@ -11,12 +11,12 @@ M.setup = function()
     { name = "DiagnosticSignInfo", text = "" },
   }
 
-  -- this for loop just defines signs 
+  -- this for loop just defines signs
   for _, sign in ipairs(signs) do
     vim.fn.sign_define(sign.name, { texthl = sign.name, text = sign.text, numhl = "" })
   end
 
-  -- our config 
+  -- our config
   local config = {
     -- disable virtual text
     virtual_text = false,
@@ -37,7 +37,7 @@ M.setup = function()
     },
   }
 
-  -- configure the vim diagnostics according to the options we have set above. 
+  -- configure the vim diagnostics according to the options we have set above.
   vim.diagnostic.config(config)
 
   -- gives rounded borders to hover and signatureHelp (basically)
@@ -50,7 +50,7 @@ M.setup = function()
   })
 end
 
--- another local function. everytime you hover over a word/keyword etc it'll highlight the word and all the instances 
+-- another local function. everytime you hover over a word/keyword etc it'll highlight the word and all the instances
 local function lsp_highlight_document(client)
   -- Set autocommands conditional on server_capabilities
   if client.resolved_capabilities.document_highlight then
@@ -80,13 +80,14 @@ local function lsp_keymaps(bufnr)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
   -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>f", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts) -- '[d' ==> go to previous...?
-  vim.api.nvim_buf_set_keymap(
-    bufnr,
-    "n",
-    "gl",
-    '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
-    opts
-  ) -- pressing 'gl' will show us line diagnostics
+  -- vim.api.nvim_buf_set_keymap(
+  --   bufnr,
+  --   "n",
+  --   "gl",
+  --   '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics({ border = "rounded" })<CR>',
+  --   opts
+  -- ) -- pressing 'gl' will show us line diagnostics
+  vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", '<cmd>lua vim.diagnostic.open_float(0, { scope = "line", border = "single" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
   vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]] -- have the ability to create ":Format" which executes 'lua vim.lsp.buf.formatting()'
@@ -100,7 +101,7 @@ M.on_attach = function(client, bufnr)
   end
   -- (2) we then use the lsp_keymaps, the local function up above...
   lsp_keymaps(bufnr)
-  -- (3) just does highlighting. That is it. 
+  -- (3) just does highlighting. That is it.
   lsp_highlight_document(client)
 end
 

@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["close-buffers.nvim"] = {
+    loaded = true,
+    path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/close-buffers.nvim",
+    url = "https://github.com/kazhala/close-buffers.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -122,6 +127,11 @@ _G.packer_plugins = {
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/opt/markdown-preview.nvim",
     url = "https://github.com/iamcco/markdown-preview.nvim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -137,6 +147,16 @@ _G.packer_plugins = {
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
+    url = "https://github.com/p00f/nvim-ts-rainbow"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -151,6 +171,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/masonwong/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["tokyonight.nvim"] = {
     loaded = true,

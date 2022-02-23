@@ -110,6 +110,10 @@ return packer.startup(function(use)
     run = ":TSUpdate",
   }
 
+  -- autopairs for brace completion
+  use "windwp/nvim-autopairs"
+  use "p00f/nvim-ts-rainbow"
+
   -- vim-emmet for html
   -- use "mattn/emmet-vim"
 
