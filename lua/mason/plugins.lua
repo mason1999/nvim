@@ -104,7 +104,7 @@ return packer.startup(function(use)
   -- buffers
   use "kazhala/close-buffers.nvim"
 
-  -- Treesitter. The run = "..." updates all our parsers. 
+  -- Treesitter. The run = "..." updates all our parsers.
   use {
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
@@ -114,6 +114,8 @@ return packer.startup(function(use)
   use "windwp/nvim-autopairs"
   use "p00f/nvim-ts-rainbow"
 
+  -- Git integration
+  use "lewis6991/gitsigns.nvim"
   -- vim-emmet for html
   -- use "mattn/emmet-vim"
 
