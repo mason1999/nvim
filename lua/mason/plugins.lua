@@ -84,10 +84,16 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-path" -- The completion plugin
   use "hrsh7th/cmp-cmdline" -- The completion plugin
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
+  use "hrsh7th/cmp-nvim-lsp" -- This provides completions from the lsp source
+  use "hrsh7th/cmp-nvim-lua" -- completion for lua. 
 
   -- snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
+
+  -- LSP
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "williamboman/nvim-lsp-installer" -- simple to use language server installer. super easy to install, delete and update
 
   -- vim-emmet for html
   -- use "mattn/emmet-vim"

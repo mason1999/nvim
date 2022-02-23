@@ -1,0 +1,8 @@
+-- return {
+-- 	settings = {
+--     java = {
+--       completion = {
+--         enabled = false}
+--     }
+-- 	},
+-- }

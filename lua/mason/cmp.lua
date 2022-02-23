@@ -117,8 +117,10 @@ cmp.setup {
       -- vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
       vim_item.menu = ({
-        luasnip = "[Luasnip]",
-        buffer = "[File]",
+        nvim_lsp = "[LSP]",
+        nvim_lua = "[NVIM_LUA]",
+        luasnip = "[Snippet]",
+        buffer = "[Buffer]",
         path = "[Path]",
       })[entry.source.name]
       return vim_item
@@ -126,6 +128,8 @@ cmp.setup {
   },
   -- the order of precedence. This means that the luasnip stuff will show up first as opposed to the file stuff
   sources = {
+    { name = "nvim_lsp"},
+    { name = "nvim_lua"},
     { name = "luasnip" },
     { name = "buffer" },
     { name = "path" },
