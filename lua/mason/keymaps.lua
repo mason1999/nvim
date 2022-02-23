@@ -28,7 +28,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- " e" run the command ":Lexplore 30 <cr>". press it again to toggle it. 30 is the size of the left hand explorer. 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
+--keymap("n", "<leader>e", ":Lex 30<cr>", opts)
 
 -- Resize with arrows. Positive directions indicate increasing sizes
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
@@ -66,3 +66,6 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts) -- this one is the same as ":Telescope find_files" but there's too much NOISE with the preview
 keymap("n", "<leader>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts) -- this one searches for files without the noise
 keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) -- <ctrl-t> to find phrases
+
+-- NvimTree --
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
