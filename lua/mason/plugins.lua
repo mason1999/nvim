@@ -38,6 +38,7 @@ if not status_ok then
   return
 end
 
+
 -- Have packer use a popup window
 -- basically makes a floating window with rounder boarders
 -- if you didn't have this, it just does a vertical split instead. lol
@@ -102,6 +103,12 @@ return packer.startup(function(use)
 
   -- buffers
   use "kazhala/close-buffers.nvim"
+
+  -- Treesitter. The run = "..." updates all our parsers. 
+  use {
+    "nvim-treesitter/nvim-treesitter",
+    run = ":TSUpdate",
+  }
 
   -- vim-emmet for html
   -- use "mattn/emmet-vim"
