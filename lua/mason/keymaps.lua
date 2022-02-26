@@ -6,10 +6,10 @@ local term_opts = { silent = true }
 -- otherwise we would always have to type out vim.api.nvim_set_keymap every time we mapped
 local keymap = vim.api.nvim_set_keymap
 
--- Remap space as leader key
+-- Remap , as leader key
 keymap("", "<Space>", "<Nop>", opts)
-vim.g.mapleader = " "
-vim.g.maplocalleader = " "
+vim.g.mapleader = ","
+vim.g.maplocalleader = ","
 
 -- Modes
 --   normal_mode = "n",
@@ -69,3 +69,7 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) -- <ctrl-t> to find p
 
 -- NvimTree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- test -- 
+vim.api.nvim_command('autocmd Filetype python map ,r :vsplit term://python3 % <cr> i')
+
