@@ -70,6 +70,9 @@ keymap("n", "<c-t>", "<cmd>Telescope live_grep<cr>", opts) -- <ctrl-t> to find p
 -- NvimTree --
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
--- test -- 
+-- for python -- 
 vim.api.nvim_command('autocmd Filetype python map ,r :vsplit term://python3 % <cr> i')
 
+-- for R --
+vim.api.nvim_command('autocmd Filetype r inoremap <buffer> > <Esc>:normal! a%>%<CR>a')
+vim.api.nvim_command('autocmd Filetype r map ,<S-g> mk<S-v><S-g>,ss`k<Esc>')
